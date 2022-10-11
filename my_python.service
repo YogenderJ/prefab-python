@@ -1,0 +1,17 @@
+[Unit]
+Description=My-python-service
+After=network.target
+
+[Service]
+ExecStart= /home/ubuntu/codepipeline/python/start_python.sh
+Restart=always
+RestartSec=500ms
+StartLimitInterval=0
+User=nobody
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/home/ubuntu/codepipeline/python
+
+[Install]
+WantedBy=multi-use.target
+
