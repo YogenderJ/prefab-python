@@ -3,6 +3,7 @@
 #nohup gunicorn --bind 0.0.0.0:3000 wsgi:app > /dev/null 2>&1 &
 #sudo sh -c './start_python.sh'
 #source env/bin/activate
+
 /usr/bin/python3 /home/ubuntu/codepipeline/python/app.py > /dev/null 2>&1 &
 #touch aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.txt
 
