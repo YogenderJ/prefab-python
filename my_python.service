@@ -1,17 +1,7 @@
 [Unit]
-Description=My-python-service
-After=network.target
-
-[Service]
-ExecStart= /home/ubuntu/codepipeline/python/start_python.sh
+Description=My test service
+After=multi-user.target[Service]
+Type=simple
 Restart=always
-RestartSec=500ms
-StartLimitInterval=0
-User=nobody
-Group=nogroup
-Environment=PATH=/usr/bin:/usr/local/bin
-WorkingDirectory=/home/ubuntu/codepipeline/python
-
-[Install]
-WantedBy=multi-use.target
-
+ExecStart=/usr/bin/python3 /home/ubuntu/codepipeline/python/app.py[Install]
+WantedBy=multi-user.target
