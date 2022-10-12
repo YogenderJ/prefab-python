@@ -1,6 +1,6 @@
 #!/bin/bash
 #cd /home/ubuntu/codepipeline/python
-sh -c '/home/ubuntu/codepipeline/python/start_python.sh'
+sudo sh -c '/home/ubuntu/codepipeline/python/start_python.sh'
 #source env/bin/activate
 #python3 app.py > /dev/null 2>&1 &
 #touch aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.txt
